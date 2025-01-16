@@ -1,39 +1,57 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
+import { Tabs } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons'
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
-
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
-
-  return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
-  );
+export default function Layout() {
+    return (
+        <Tabs
+            screenOptions={{
+                tabBarActiveTintColor: '#FF6720',
+                tabBarInactiveTintColor: '#757575',
+                tabBarStyle: {
+                    backgroundColor: '#ffffff',
+                },
+            }}
+        >
+            <Tabs.Screen
+                name="(tabs)/index"
+                options={{
+                    headerShown: false,
+                    title: 'Anasayfa',
+                    tabBarIcon: ({ color, size }) => (
+                        <Ionicons name="home-outline" color={color} size={size} />
+                    ),
+                }}
+            />
+            <Tabs.Screen
+                name="(tabs)/favorites"
+                options={{
+                    headerShown: false,
+                    title: 'Favorilerim',
+                    tabBarIcon: ({ color, size }) => (
+                        <Ionicons name="heart-outline" color={color} size={size} />
+                    ),
+                }}
+            />
+            <Tabs.Screen
+                name="(tabs)/cart"
+                options={{
+                    headerShown: false,
+                    title: 'Sepet',
+                    tabBarIcon: ({ color, size }) => (
+                        <Ionicons name="cart-outline" color={color} size={size} />
+                    ),
+                }}
+            />
+            <Tabs.Screen
+                name="(tabs)/account"
+                options={{
+                    headerShown: false,
+                    title: 'hesabım',
+                    tabBarIcon: ({ color, size }) => (
+                        <Ionicons name="person-outline" color={color} size={size} />
+                    ),
+                }}
+            />
+        </Tabs>
+    );
 }
