@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="be8fe115-6d2f-4df4-8d98-67d4f036ad65" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Categories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Categories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Slider.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1737049212701</updated>
       <workItem from="1737049214466" duration="7731000" />
-      <workItem from="1737110629435" duration="2317000" />
+      <workItem from="1737110629435" duration="3615000" />
     </task>
     <servers />
   </component>

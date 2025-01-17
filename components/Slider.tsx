@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
+import {View, Text, ScrollView, Image, TouchableOpacity, Dimensions} from 'react-native';
 
 export default function Slider() {
     const items = [
@@ -7,6 +7,7 @@ export default function Slider() {
         { id: 2, title: 'Item 2', url: 'https://picsum.photos/200/300?random=2' },
         { id: 3, title: 'Item 3', url: 'https://picsum.photos/200/300?random=3' },
     ];
+
 
     return (
         <View className="">

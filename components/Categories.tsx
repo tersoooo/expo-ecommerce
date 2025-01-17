@@ -1,6 +1,7 @@
 import React, {useState} from "react";
-import {View, Text, FlatList, TouchableOpacity} from "react-native";
+import {View, Text, FlatList, TouchableOpacity, Dimensions} from "react-native";
 import Slider from './Slider'
+import Services from "@/components/Services";
 
 export default function Categories() {
 
@@ -15,12 +16,16 @@ export default function Categories() {
         'Elektronik',
     ];
 
+
     const renderContent = () => {
         switch (activeCategory) {
             case 'Kadın':
                 return(
-                    <View className="-mt-2">
-                        <Slider />
+                    <View className="-mt-2 h-screen">
+                        <View className="pb-5 pt-2">
+                            <Slider />
+                        </View>
+                        <Services />
                     </View>
                 )
             case 'Erkek':
