@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {View, Text, FlatList, TouchableOpacity} from "react-native";
+import Slider from './Slider'
 
 export default function Categories() {
 
@@ -17,9 +18,17 @@ export default function Categories() {
     const renderContent = () => {
         switch (activeCategory) {
             case 'Kadın':
-                return <Text className="text-lg text-gray-800">Kadın kategorisi içeriği</Text>;
+                return(
+                    <View className="-mt-2">
+                        <Slider />
+                    </View>
+                )
             case 'Erkek':
-                return <Text className="text-lg text-gray-800">Erkek kategorisi içeriği</Text>;
+                return (
+                    <View>
+                        <Text>Burası erkek kategorisi</Text>
+                    </View>
+                )
             case 'Ev & Yaşam':
                 return <Text className="text-lg text-gray-800">Ev & Yaşam kategorisi içeriği</Text>;
             case 'Anne & Çocuk':
