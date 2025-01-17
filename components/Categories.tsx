@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {View, Text, FlatList, TouchableOpacity, Dimensions} from "react-native";
 import Slider from './Slider'
 import Services from "@/components/Services";
+import PopulerProducts from "@/components/PopulerProducts";
 
 export default function Categories() {
 
@@ -26,6 +27,7 @@ export default function Categories() {
                             <Slider />
                         </View>
                         <Services />
+                        <PopulerProducts />
                     </View>
                 )
             case 'Erkek':
