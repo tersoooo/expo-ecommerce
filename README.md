@@ -24,6 +24,6 @@
 ![Kategoriler](assets/CategoryMan.jpeg)
 
 ### Sayfalar
-![Favoriler](assets/Favorites.jpeg)
-![Sepet](assets/Basket.jpeg)
-![Hesap](assets/Account.jpeg)
+![Favoriler](assets/favorites.jpeg)
+![Sepet](assets/basket.jpeg)
+![Hesap](assets/account.jpeg)
